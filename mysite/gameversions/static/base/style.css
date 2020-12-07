@@ -1,0 +1,29 @@
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0
+}
+
+body {
+    font-family:Arial,lucida sans unicode;
+    font-size:87.5%;
+    line-height:1.5;
+    min-height:480px;
+    min-width:320px;
+    text-align:left
+}
+
+.navbar-brand {
+    background-color: black;
+    font-size: 36px;
+    font-family: Verdana;
+    font-weight: bolder;
+}
+
+.navbar {
+    font-size: 24px;
+}
+
+#navBarSearchForm {
+    width:430px;
+}

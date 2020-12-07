@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'base/style.css' %}">
+</head>
+    <body>
+        <div class="container">
+            <div class="row" style="min-width: 600px;">
+                <a href="{% url 'home' %}" class="navbar-brand px-2 text-light">GV</a>
+                <div class="navbar">
+                    <form class="navbar-form" role="search" action="" method="GET">
+                        <input class="form-control" id="navBarSearchForm" type="search" name="game_name" placeholder="Search">
+                    </form>
+                    <a href="#" class="nav-item nav-link">Games</a>
+                    <a href="#" class="nav-item nav-link">Submit</a>
+                </div>
+            </div>
+        </div>
+        <div>
+
+            {% block body %}
+
+            {% endblock %}
+        </div>
+    </body>
+</html>
