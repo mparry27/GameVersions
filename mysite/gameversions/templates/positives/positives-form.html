@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+{% load crispy_forms_tags %}
+{% block body %}
+    <div class="container">
+        <form method="post" class="py-4">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="form-group">
+                    {{ form.consolegame|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    {{ form.name|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    {{ form.description|as_crispy_field }}
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Save</button>
+        </form>
+    </div>
+{% endblock %}

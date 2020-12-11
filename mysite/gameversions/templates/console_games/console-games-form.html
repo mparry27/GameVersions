@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+{% load crispy_forms_tags %}
+{% block body %}
+    <div class="container">
+        <form method="post" class="py-4" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    {{ form.game|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-5">
+                    {{ form.console|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-1 mt-4 pt-1">
+                    <a class="btn btn-success" href="#">+</a>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    {{ form.release_date|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-4">
+                    {{ form.edition|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-4">
+                    {{ form.collection|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-1 mt-4 pt-1">
+                    <a class="btn btn-success " href="#">+</a>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-check">
+                    {{ form.original_release|as_crispy_field }}
+                </div>
+                <div class="form-check">
+                    {{ form.recommended_version|as_crispy_field }}
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Save</button>
+        </form>
+    </div>
+{% endblock %}

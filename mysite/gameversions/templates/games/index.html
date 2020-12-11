@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+{% block body %}
+    <div class="container">
+        <div class="card-columns m-3 py-4">
+            {% for game in games_list %}
+                <a class="card text-center" href="{% url 'game_detail' game.id %}">
+                    <img class="card-img-top" src="/media/{{ game.cover }}">
+                    <h4 class="card-body">{{ game.name }}</h4>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
